@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrectly using innerHTML to set multiple elements
+    document.getElementById("myDiv").innerHTML = "<h1>This is a heading</h1><p>This is a paragraph</p>";
+    document.getElementById("myDiv").innerHTML += "<p>This is another paragraph.</p>";
+  </script>
+</body>
+</html>
